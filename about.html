@@ -31,7 +31,7 @@
         to put all stylesheet in one file. I always spend lots of time on find code. So I decided to do it this way.
         This is much easier for me, hope you could understand, thanks.// -->
 
-
+<!-- Start of the stylesheet.// -->
     <style>
         * {
             margin: 0;
@@ -216,6 +216,10 @@
             /*color: rgb(242, 202, 62);*/
         }
     </style>
+<!-- End of the stylesheet.// -->
+
+
+
 </head>
 <body style="  ">
 <div class="container">
@@ -224,11 +228,15 @@
             <div class="col-7">
                 <!--<h2>XZ</h2>-->
             </div>
+
+            <!-- Start of the navigation part.// -->
             <div class="col-5">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link home" href="./home.html"  style="font-family:Raleway;">Home</a>
                     </li>
+                    <!-- The black underline is indicating which page is selected, I leanred the code from here:
+                        https://www.w3schools.com/cssref/pr_border-bottom.asp// -->
                     <li class="nav-item">
                         <a class="nav-link about" href="./about.html" style="border-bottom: 1px solid black" style="font-family:Raleway;">AboutMe</a>
                     </li>
@@ -240,6 +248,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- End of the navigation part.// -->
         </div>
     </div>
 
@@ -247,6 +256,7 @@
         <div class="content">
             <div class="main">
                 <div class="section">
+                    <!-- My self-intro which includes the basic information of myself.// -->
                     <h4 style="font-family:Pacifico;">Self-Intro</h4>
                     <div class="detail" style="font-family:Lato;">
                         Hi, My name is Xinyu Zhao, you can also call me Ivy. Currently, I am a design student at SFU. I came to Canada about 8 years ago and I think this is a very beautiful country. I am really interested in graphic and UI design, as well as editing. I hope I can do some jobs related to these areas after I graduate. Before university, I never thought I would choose design as my major, science was always my strength. However, science is not my interest. The introduction of IAT major was very intriguing and I chose to give it a try. After 4 years learning, I am glad I chose it and I feel very fortunate that I could do something I love.
@@ -254,18 +264,22 @@
                     </div>
                 </div>
                 <div class="section">
+                    <!-- Some interesting thing about me and my design style.// -->
                     <h4 style="font-family:Pacifico;">Something About Me</h4>
                     <div class="detail" style="font-family:Lato;">
                         My life is very simple, mainly just going to school, doing projects and learning. When I get free time, I like to watch movies, play games or make Chinese food. I am not a very outgoing person, but I like to hang out with my friends. Chinese food is my favorite, I cannot live without it. Same as my life, my design style is also very simple. I like to use simple structures and high contrast colors to highlight the important part.
                     </div>
                 </div>
                 <div class="section">
+                    <!-- My skills section shows what kinds of softwares I could use.// -->
                     <h4 style="font-family:Pacifico;">My Skills</h4>
                     <div class="detail">
                         <div class="skill" >
                             <span style="font-family:Lato;">Illustrator</span>
                             <div class="show">
                                 <div class="progress">
+                                    <!-- The code for progress I learned from here:
+                                        https://www.w3schools.com/tags/tag_progress.asp.// -->
                                     <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
                                          aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%
                                     </div>
