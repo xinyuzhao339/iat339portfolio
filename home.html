@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xinyu Zhao's Portfolio</title>
+    <!--  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
+    <!--  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>-->
+
+     <!-- I learned how to implement jquery and bootstrap from a friend who is in CS major, Youtube and some other websites:
+    https://www.youtube.com/watch?v=hMxGhHNOkCU
+    https://www.youtube.com/watch?v=EwUOsRlDTLQ
+    https://www.w3schools.com/jquery/
+    https://www.w3schools.com/jquery/jquery_intro.asp
+    https://jqueryui.com/ 
+    https://www.youtube.com/watch?v=yalxT0PEx8c
+    https://www.youtube.com/watch?v=314m7YBRFvQ&list=PL6n9fhu94yhXd4xnk-j5FGhHjUv1LsF0V
+    I found these tool very useful when creating websites, they saved me lots of time on UI and effects.// -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <!-- I learned how to implement google fonts from here:
+    	https://www.w3schools.com/howto/howto_google_fonts.asp// -->
+
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+    <!-- I decided to put style parts in each file. Because from project 2, I found it is very confusing for me
+        to put all stylesheet in one file. I always spend lots of time on find code. So I decided to do it this way.
+        This is much easier for me, hope you could understand, thanks.// -->
+
+    <!-- Start of the stylesheet for home page.// -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+        }
+
+        .a {
+            height: 508px;
+        }
+
+        .header {
+            height: 80px;
+        }
+
+        .header .row {
+            height: 80px;
+            align-items: center;
+        }
+
+        .header .col-5 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .body {
+            display: none;
+        }
+
+        .body .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .body .content .main {
+            width: 80%;
+        }
+
+        .body .content .main .section {
+            margin: 0 auto;
+            width: 70%;
+            margin-bottom: 50px;
+        }
+
+        .body .content .main h4 {
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        .body .content .main .detail {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        /*.body .content::-webkit-scrollbar-thumb {*/
+        /*  width: 6px;*/
+        /*  background-color: #09f;*/
+        /*}*/
+        .skill {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .show {
+            width: 50%;
+        }
+
+        .slider {
+            width: 812px;
+            height: 500px;
+            /*border: 1px solid red;*/
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slider-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*width: 300%;*/
+            height: 100%;
+        }
+
+        .slider-item {
+            width: 912px;
+            height: 100%;
+            float: left;
+        }
+
+        .slider-item .slider-inner {
+            width: 912px;
+            height: 100%;
+        }
+
+        .points {
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            bottom: 7px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .points span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .slider,
+        .desc {
+            margin-bottom: 50px;
+        }
+
+        .body .col-5 {
+            display: flex;
+            align-items: center;
+        }
+
+        .jumbotron {
+            padding-left: 100px;
+            width: 100%;
+            background: #fff;
+        }
+
+        .footer {
+            width: 1140px;
+            /*position: fixed;*/
+            /*bottom: 0;*/
+            border-top: 1px solid #cccccc57;
+            /*flex-grow: 1;*/
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+        }
+
+        .infos .col-2 {
+            border-right: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infos .col-2:last-child {
+            border-right: none;
+        }
+
+        a {
+            /*color: rgb(242, 202, 62);*/
+        }
+
+        .badge-dark {
+            /*color: rgb(242, 202, 62);*/
+        }
+    </style>
+    <!-- End of the stylesheet for home page.// -->
+
+</head>
+<!-- Start of the navigation part.// -->
+</head>
+<body style="  ">
+<div class="container">
+    <div class="header">
+        <div class="row">
+            <div class="col-7">
+                <!--<h2>XZ</h2>-->
+            </div>
+            <div class="col-5">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link home" href="./home.html"  style="border-bottom: 1px solid black" style="font-family:Raleway;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link about" href="./about.html" style="font-family:Raleway;">AboutMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pro1" href="./pro1.html" style="font-family:Raleway;">Project1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pro2" href="./pro2.html" style="font-family:Raleway;">Project2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End of the navigation part.// -->
+
+
+
+    <!-- Start of the middle part.// -->
+
+    <div class="row body a" style="position:relative; margin-top: 20px;">
+        <div class="col-6" style="">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4" style="font-family:Pacifico;">Hello</h1>
+                    <p class="lead" style="font-family:Raleway;">I'm Xinyu</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6" style="width: 70%;height: 80%;position: absolute;top: 71px;left: 427px;">
+            <img src="./src/home-main.png" style="width: 100%;height: 100%;" alt="">
+        </div>
+    </div>
+    <!-- End of the middle part.// -->
+
+
+
+
+    <!-- Start of the footer.// -->
+
+    <div class="footer" style="margin-top: 30px; margin-bottom: 20px; ">
+        <div class="row">
+            <div class="col-5 info">
+                <!--<h2>XZ</h2>-->
+            </div>
+        </div>
+        <div class="row info">
+        	<!-- Start of the contact information.// -->
+            <div class="c col-2">
+            	<!-- I learned this from here: https://www.w3schools.com/bootstrap/bootstrap_badges_labels.asp// -->
+                <span class="badge badge-pill badge-dark" style="font-family:Raleway;">Tel:</span>
+                <span style="font-family:Raleway;">778-874-6683</span>
+            </div>
+            <div class="c col-3">
+                <span class="badge badge-pill badge-dark" style="font-family:Raleway;">Email:</span>
+                <span style="font-family:Raleway;">zhaoxinyu1115@gmail.com</span>
+            </div>
+            <div class="c col-5">
+                <span class="badge badge-pill badge-dark" style="font-family:Raleway;">Adress:</span>
+                <span style="font-family:Raleway;">2955 Atlantic Avenue, Coquitlam BC</span>
+            </div>
+            <!-- End of the contact information.// -->
+        </div>
+        <div class="row info infos" style="margin-top: 20px;">
+        	<!-- Start of the links.// -->
+            <div class="col-2">
+                <a href="./styleguide.html" style="font-family:Raleway;">Style Guide</a>
+            </div>
+            <div class="col-2">
+                <a href="https://github.com/xinyuzhao339/iat339portfolio" style="font-family:Raleway;">Git Repository</a>
+            </div>
+            <div class="col-2">
+                <a href="./citation.html" style="font-family:Raleway;">Citation</a>
+            </div>
+            <!-- End of the links.// -->
+        </div>
+    </div>
+</div>
+<!-- End of the footer.// -->
+
+<script>
+    window.onload = () => {
+        $('.a').css({display: 'block'})
+        const lis = $('.slider-item')
+        $('.slider-list').width(lis.length * 100 + '%')
+        let i = 0
+        let left = 0
+        let timer = null
+        let first = lis[0]
+
+        // Carousel control previous page next page
+        function move() {
+            clearInterval(timer)
+            timer = setInterval(() => {
+                i++
+                if (i === lis.length) {
+                    console.log(lis.length)
+                    $('.slider-list').stop()
+                    $('.slider-list').css({left: 0})
+                    i = 0
+                }
+                $('.slider-list').animate({left: -i * 912}, 1000)
+            }, 6000)
+        }
+
+        move()
+        const points = document.getElementsByClassName('point')
+        console.log(points);
+        // use jquery
+        for (let j = 0; j < points.length - 1; j++) {
+            points[j].onclick = function (e) {
+                $('.slider-list').stop()
+                clearInterval(timer)
+                console.log(e.target.dataset.i);
+                i = e.target.dataset.i
+                left = -e.target.dataset.i * 912
+                $('.slider-list').animate({left: -e.target.dataset.i * 912 + 'px'}, 1000)
+            }
+            points[j].onmouseout = function (e) {
+                console.log(1);
+                move()
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

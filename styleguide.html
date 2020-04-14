@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xinyu Zhao's Portfolio</title>
+    <!--  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
+    <!--  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>-->
+
+     <!-- I learned how to implement jquery and bootstrap from a friend who is in CS major, Youtube and some other websites:
+    https://www.youtube.com/watch?v=hMxGhHNOkCU
+    https://www.youtube.com/watch?v=EwUOsRlDTLQ
+    https://www.w3schools.com/jquery/
+    https://www.w3schools.com/jquery/jquery_intro.asp
+    https://jqueryui.com/ 
+    https://www.youtube.com/watch?v=yalxT0PEx8c
+    https://www.youtube.com/watch?v=314m7YBRFvQ&list=PL6n9fhu94yhXd4xnk-j5FGhHjUv1LsF0V
+    I found these tool very useful when creating websites, they saved me lots of time on UI and effects.// -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <!-- I learned how to implement google fonts from here:
+        https://www.w3schools.com/howto/howto_google_fonts.asp// -->
+
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+    <!-- I decided to put style parts in each file. Because from project 2, I found it is very confusing for me
+        to put all stylesheet in one file. I always spend lots of time on find code. So I decided to do it this way.
+        This is much easier for me, hope you could understand, thanks.// -->
+
+    <!-- Start of the stylesheet.// -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+        }
+
+        .a {
+            height: 508px;
+        }
+
+        .header {
+            height: 80px;
+        }
+
+        .header .row {
+            height: 80px;
+            align-items: center;
+        }
+
+        .header .col-5 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .body {
+            display: block;
+        }
+
+        .body .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .body .content .main {
+            width: 80%;
+        }
+
+        .body .content .main .section {
+            margin: 0 auto;
+            width: 70%;
+            margin-bottom: 50px;
+        }
+
+        .body .content .main h4 {
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        .body .content .main .detail {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        /*.body .content::-webkit-scrollbar-thumb {*/
+        /*  width: 6px;*/
+        /*  background-color: #09f;*/
+        /*}*/
+        .skill {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .show {
+            width: 50%;
+        }
+
+        .slider {
+            width: 812px;
+            height: 500px;
+            /*border: 1px solid red;*/
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slider-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*width: 300%;*/
+            height: 100%;
+        }
+
+        .slider-item {
+            width: 912px;
+            height: 100%;
+            float: left;
+        }
+
+        .slider-item .slider-inner {
+            width: 912px;
+            height: 100%;
+        }
+
+        .points {
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            bottom: 7px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .points span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .slider,
+        .desc {
+            margin-bottom: 50px;
+        }
+
+        .body .col-5 {
+            display: flex;
+            align-items: center;
+        }
+
+        .jumbotron {
+            padding-left: 100px;
+            width: 100%;
+            background: #fff;
+        }
+
+        .footer {
+            width: 1140px;
+            /*position: fixed;*/
+            /*bottom: 0;*/
+            border-top: 1px solid #cccccc57;
+            /*flex-grow: 1;*/
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+        }
+
+        .infos .col-2 {
+            border-right: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infos .col-2:last-child {
+            border-right: none;
+        }
+
+        a {
+            /*color: rgb(242, 202, 62);*/
+        }
+
+        .badge-dark {
+            /*color: rgb(242, 202, 62);*/
+        }
+    </style>
+</head>
+
+
+<!-- Start of the navigation part.// -->
+</head>
+<body style="  ">
+<div class="container">
+    <div class="header">
+        <div class="row">
+            <div class="col-7">
+                <!--<h2>XZ</h2>-->
+            </div>
+            <div class="col-5">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link home" href="./home.html"   style="font-family:Raleway;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link about" href="./about.html" style="font-family:Raleway;">AboutMe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pro1" href="./pro1.html" style="font-family:Raleway;">Project1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pro2" href="./pro2.html" style="font-family:Raleway;">Project2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End of the navigation part.// -->
+
+    <header>
+
+        <div class="header-top">
+        <h1>Xinyu Zhao's Portfolio</a></h1>
+        <p>This is the style guide for my own portfolio website.</p>
+        </div>
+
+      
+    </header>
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <div id="interactive_elements">
+
+      <!-- Default Button styling section -->
+      <div class="element">
+
+        <h2>In-Text Link</h2>
+
+        <p>This is the <a href="./home.html">link </a>goes to home page.</p>
+        <h3>Sample Code</h3>
+        <code>
+        &lt;p&gt;This is the &lt;a href="./home.html"&gt;link &lt;/a&gt; hoes to home page &lt;/p&gt;</code>
+
+      </div>
+
+      <div class="element">
+        <h2>Navigation</h2>
+
+        <a class="nav-link home" href="./home.html">Home</a>
+
+        <h3>Sample Code</h3>
+
+        <code>&lt;nav&gt;
+        &lt;a class="nav-link home" href="./home.html"&gt;Home&lt;/a&gt; 
+        </code>
+
+      </div>
+
+
+<!--       <div class="element">
+        <h2>Text Input Field and Label</h2>
+        <p><button name="show-me-more" class="show-me">Show Me More</button></p>
+        <h3>Sample Code</h3>
+
+        <code>
+          &lt;button name="show-me-more" class="show-me"&gt;Show Me More&lt;/button&gt;
+        </code>
+      </div> -->
+
+
+    </div>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <div id="text_elements">
+
+      <div class="element">
+        <h2>Four Levels of Headings</h2>
+          <h1>Heading 1 (Main Title)</h1>
+          <h2>Heading 2 (Section Header)</h2>
+          <h3>Heading 3 header (Sub Section Header)</h3>
+          <h4>Heading 4 header (Secondary Sub Section Header)</h4>
+
+      <h3>Sample Code</h3>
+
+          <code>
+
+            &lt;h1&gt;Heading 1 (Main Title) &lt;/h1&gt;
+            &lt;h2&gt;Heading 2 (Section Header) &lt;/h2&gt;
+            &lt;h3&gt;Heading 3 header (Sub Section Header) &lt;/h3&gt;
+            &lt;h4&gt;Heading 4 header &lt;/h4&gt;
+
+          </code>
+      </div>
+
+      <div class="element">
+          <h2>A Paragraph</h2>
+
+          <p>
+          Hi, My name is Xinyu Zhao, you can also call me Ivy. Currently, I am a design student at SFU. I came to Canada about 8 years ago and I think this is a very beautiful country. I am really interested in graphic and UI design, as well as editing. I hope I can do some jobs related to these areas after I graduate. Before university, I never thought I would choose design as my major, science was always my strength. However, science is not my interest. The introduction of IAT major was very intriguing and I chose to give it a try. After 4 years learning, I am glad I chose it and I feel very fortunate that I could do something I love.
+          </p>
+
+          <h3>Sample Code</h3>
+
+          <code>
+            &lt;p&gt;Hi, My name is Xinyu Zhao, you can also call me Ivy. Currently, I am a design student at SFU. I came to Canada about 8 years ago and I think this is a very beautiful country. I am really interested in graphic and UI design, as well as editing. I hope I can do some jobs related to these areas after I graduate. Before university, I never thought I would choose design as my major, science was always my strength. However, science is not my interest. The introduction of IAT major was very intriguing and I chose to give it a try. After 4 years learning, I am glad I chose it and I feel very fortunate that I could do something I love. &lt;/p&gt;
+          </code>
+
+      </div>
+
+    </div>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <div id="combined_elements">
+
+      <div class="element">
+          <h2>Fonts</h2>
+
+          <p id="fonts-heading-1">Cinzel: This is the font for title/heading.</p>
+          <p id="fonts-heading-other">Cormorant Garamond: This is the font for heading 2-4.</p>
+          <p id="fonts-para">Amiri: This is the font for body.</p>
+
+      </div>
+
+      <div class="element">
+        <h2>Colors</h2>
+            <div class="color1">
+              <p class="colorDescribe">Background Color</p>
+
+            </div>
+
+
+            <div class="color2">
+              <p class="colorDescribe">Text Color</p>
+
+
+            </div>
+
+<!--             <div class="color3">
+              <p class="colorDescribe">Navgation bar color 1</p>
+
+            </div> -->
+
+            <div class="color4">
+              <p class="colorDescribe">Navgation Bar Color </p>
+
+            </div>
+
+<!--             <div class="color5">
+              <p class="colorDescribe">Heading Color</p>
+
+            </div> -->
+      </div>
+
+      <div class="element">
+
+        <h2>Project 1</h2>
+
+        <h3>The Gifts</h3>
+
+        <video muted autoplay loop controls style="height: 40%; width: 40%;">
+            <source src="./src/file.mp4" type="video/mp4">
+        </video>  
+        <h4>Introduce</h4>
+        <p>
+
+        This project is a 6 minute horror film which I made when I was in second year in university,
+        it’s name is The Gifts. The film is about a mean girl who stole her best friend’s boyfriend and
+        then meets a weird clown on the street. Then some weird things happened after.
+        My part: I participated in the whole process of making this film. This was the first time I
+        could make a whole film, so I was very passionate. The main part of mine was the post-production
+        part, I basically did the whole post-production. I am really proud of the effects I did for this
+        film.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+    <div id="contact">
+      <h2>Contact Information</h2>
+      <p>
+        Name: Xinyu Zhao<br>
+        Phone: 778-874-6683 <br>
+        E-mail: zhaoxinyu1115@gmail.com 
+      </p>
+
+      
+    </div>
+
+
+
+    <!-- Start of the footer.// -->
+
+    <div class="footer" style="margin-top: 30px; margin-bottom: 20px; ">
+        <div class="row">
+            <div class="col-5 info">
+                <!--<h2>XZ</h2>-->
+            </div>
+        </div>
+        <div class="row info">
+            <!-- Start of the contact information.// -->
+            <div class="c col-2">
+                <!-- I learned this from here: https://www.w3schools.com/bootstrap/bootstrap_badges_labels.asp// -->
+                <span class="badge badge-pill badge-dark" style="font-family:Raleway;">Tel:</span>
+                <span style="font-family:Raleway;">778-874-6683</span>
+            </div>
+            <div class="c col-3">
+                <span class="badge badge-pill badge-dark" style="font-family:Raleway;">Email:</span>
+                <span style="font-family:Raleway;">zhaoxinyu1115@gmail.com</span>
+            </div>
+            <div class="c col-5">
+                <span class="badge badge-pill badge-dark" style="font-family:Raleway;">Adress:</span>
+                <span style="font-family:Raleway;">2955 Atlantic Avenue, Coquitlam BC</span>
+            </div>
+            <!-- End of the contact information.// -->
+        </div>
+        <div class="row info infos" style="margin-top: 20px;">
+            <!-- Start of the links.// -->
+            <div class="col-2">
+                <a href="./styleguide.html" style="font-family:Raleway; border-bottom: 1px solid black">Style Guide</a>
+            </div>
+            <div class="col-2">
+                <a href="https://github.com/xinyuzhao339/iat339portfolio" style="font-family:Raleway;">Git Repository</a>
+            </div>
+            <div class="col-2">
+                <a href="./citation.html" style="font-family:Raleway;">Citation</a>
+            </div>
+            <!-- End of the links.// -->
+        </div>
+    </div>
+</div>
+<!-- End of the footer.// -->
+
+</body>
+</html>
